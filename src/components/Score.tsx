@@ -7,7 +7,7 @@ type ScoreProp = {
 const Score: React.FC<ScoreProp> = ({ score }) => {
   return (
     <div className='score-container'>
-      <p>Score: {score}</p>
+      <p>Score {score}</p>
     </div>
   );
 };
