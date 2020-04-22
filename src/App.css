@@ -2,12 +2,13 @@
   font-family: 'Oswald', sans-serif;
 }
 
-html {
-  min-height: 100vh;
+html,
+body {
+  height: 100%;
 }
 
-body {
-  min-height: 100vh;
+#root {
+  height: 100%;
 }
 
 img {
@@ -17,6 +18,13 @@ img {
 
 .App {
   text-align: center;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
 }
 
 /*=============================================
@@ -34,6 +42,20 @@ img {
 
 .ant-layout-header .title {
   color: white;
+  margin-bottom: 0;
+}
+
+.app-navigation {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.app-navigation .active {
+  color: #fdcb05;
 }
 
 /*=====  End of Header Style  ======*/
@@ -47,14 +69,13 @@ img {
 
 .pokemon-list {
   max-width: 960px;
-  margin: 0 auto !important;
+  margin: 0 auto 1rem !important;
 }
 
 .pokemon-card {
   padding: 1rem;
   padding-bottom: 0;
   cursor: pointer;
-  margin-bottom: 1rem;
   border-width: 2px;
   min-height: 240px;
 }
@@ -65,8 +86,30 @@ img {
 
 .pokemon-card-cover {
   max-height: 150px;
+  max-width: 100%;
   width: auto;
   margin: 0 auto;
+}
+
+.pokemon-gallery-card-cover {
+  max-height: 150px;
+  max-width: 100%;
+  width: auto;
+  margin: 1rem auto 0;
+}
+
+.pokemon-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon-type {
+  color: gray;
+  width: fit-content;
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
 }
 
 .gray-card {
@@ -107,15 +150,7 @@ img {
 =============================================*/
 footer {
   width: 100%;
-}
-
-@media screen and (min-width: 768px) {
-  footer {
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: space-between;
-  }
+  flex-shrink: 0;
 }
 
 footer p {
@@ -123,3 +158,12 @@ footer p {
 }
 
 /*=====  End of Footer style  ======*/
+
+/*=============================================
+=            Others            =
+=============================================*/
+.loading-wrapper {
+  margin: 1rem;
+}
+
+/*=====  End of Others  ======*/
