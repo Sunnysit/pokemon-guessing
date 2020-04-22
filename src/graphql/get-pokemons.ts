@@ -9,3 +9,15 @@ export const GET_POKEMONS = gql`
     }
   }
 `;
+
+export const GET_POKEMONS_WITH_TYPES = gql`
+  query pokemons($first: Int!) {
+    pokemons(first: $first) {
+      id
+      name
+      image
+      types
+      number
+    }
+  }
+`;

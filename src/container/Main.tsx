@@ -6,6 +6,7 @@ import Pokemons from './Pokemons';
 import Question from '../components/Question';
 import Score from '../components/Score';
 import { Pokemon } from '../type/types';
+import Loading from '../shared/Loading';
 
 const Main = () => {
   const numberOfPokemon: number = 151;
@@ -20,7 +21,7 @@ const Main = () => {
     variables: { first: numberOfPokemon },
   });
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loading />;
   if (error) return <p>Error :(</p>;
 
   let pickedPokemons: Array<Pokemon> = [];

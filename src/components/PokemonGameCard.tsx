@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import { Card, Col, Typography } from 'antd';
 import { PokemonProp } from '../type/types';
 
-const PokemonCard: React.FC<PokemonProp> = ({ pokemon, handleCardClick }) => {
+const PokemonGameCard: React.FC<PokemonProp> = ({
+  pokemon,
+  handleCardClick,
+}) => {
   const [grayCard, setGrayCard] = useState(false);
 
   const { Text } = Typography;
@@ -37,4 +40,4 @@ const PokemonCard: React.FC<PokemonProp> = ({ pokemon, handleCardClick }) => {
   );
 };
 
-export default PokemonCard;
+export default PokemonGameCard;
