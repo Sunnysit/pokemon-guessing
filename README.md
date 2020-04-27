@@ -8,13 +8,11 @@
 
 ## Technologies used in this project
 
-
-* React
-* React Router
-* GraphQL (Apollo)
-* TypeScript
-* Ant Design
-
+- React
+- React Router
+- GraphQL (Apollo)
+- TypeScript
+- Ant Design
 
 ## Running
 
@@ -38,3 +36,6 @@ I get inspiration from a youtube tutorial and that's why I built this mini game.
 
 [Karl Hadwen: Build a Pokemon App | React & GraphQL Tutorial](https://www.youtube.com/watch?v=yKFoAF7J0mc)
 
+## Disclaimer
+
+This project is only for educational purposes and cannot be used for commercial purposes. It provides a simple example to demonstrate how React.js interacts with the GraphQL server.
