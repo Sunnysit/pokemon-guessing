@@ -5,6 +5,7 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom';
+import ReactGA from 'react-ga';
 import { Layout } from 'antd';
 import './App.css';
 
@@ -13,6 +14,10 @@ import HeaderContent from './container/HeaderContent';
 import FooterContent from './container/FooterContent';
 import AboutView from './views/AboutView';
 import GalleryView from './views/GalleryView';
+
+//For Google Analytics
+ReactGA.initialize('UA-121232788-5');
+ReactGA.pageview('/home');
 
 function App() {
   const { Content } = Layout;
